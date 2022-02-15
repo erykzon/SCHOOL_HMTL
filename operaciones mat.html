@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones matematicas</title>
+</head>
+<script>
+    function suma() {
+        var Num1 = parseInt(document.getElementById("N1").value);
+        var Num2 = parseInt(document.getElementById("N2").value);
+        var Num3 = parseInt(document.getElementById("N3").value);
+        var resultadoS;
+        resultadoS = ( resultadoS == null || resultadoS == "" || resultadoS == undefined) ? 0 : resultadoS;
+        resultadoS = Num1 + Num2 + Num3
+        document.getElementById("Totals").innerHTML = resultadoS;         
+    }
+
+    function resta (){
+        var Numero1 = parseInt(document.getElementById("R1").value);
+        var Numero2 = parseInt(document.getElementById("R2").value);
+        var resultadoR;
+        resultadoR = ( resultadoR == null || resultadoR == "" || resultadoR == undefined) ? 0 : resultadoR;
+        resultadoR = Numero1 - Numero2;
+        document.getElementById("Totalr").innerHTML = resultadoR;    
+       }
+
+       function multi (){
+           var multi1 = parseInt(document.getElementById("M1").value);
+           var multi2 = parseInt(document.getElementById("M2").value);
+        var resultadoM;
+        resultadoM = (resultadoM == null || resultadoM == "" || resultadoM == undefined) ? 0 : resultadoM;
+        resultadoM = multi1 * multi2;
+        document.getElementById("Totalm").innerHTML = resultadoM;
+       }
+
+       function div () {
+            var div1 = parseInt(document.getElementById("D1").value);
+            var div2 = parseInt(document.getElementById("D2").value);
+        var resultadoD;
+        resultadoD = (resultadoD == null || resultadoD == "" || resultadoD == undefined) ? 0 : resultadoD;
+        resultadoD = div1 / div2;
+        document.getElementById("Totald").innerHTML = resultadoD;
+       }
+
+
+</script>
+
+<body>
+    
+    <!-- variables de la suma-->
+    <p style="font-family: Verdana;font-size: 150%;"> Ingresa un numero en cada caja para realizar una suma :</p>
+    <input type="text" id="N1" name ="Nombre" onchange="suma(this.value);">
+    <input type="text" id="N2" onchange="suma(this.value);">
+    <input type="text" id="N3" onchange="suma(this.value);">
+    <p style="font-family: Verdana;font-size: 120%;">El resultado es:</p>
+    <p style="color: darkblue;font-size: 200%;" id="Totals"></p>
+
+<p>
+    <!-- variables de la resta-->
+    <p style="font-family: Verdana;font-size: 150%;">Ingresa 2 numeros para realizar una resta :</p>
+    <input type="text" id="R1" name ="Nombre" onchange="resta(this.value);">
+    <input type="text" id="R2" onchange="resta(this.value);">
+</p>
+    <p style="font-family: Verdana;font-size: 120%;">El resultado es:</p>
+    <p style="color: darkblue;font-size: 200%;"  id="Totalr"></p>
+
+<p>
+    <!-- variables de la multiplicación-->
+    <p style="font-family: Verdana;font-size: 150%;">Ingresa 2 numeros para realizar una multiplicación :</p>
+    <input type="text" id="M1" name ="Nombre" onchange="multi(this.value);">
+    <input type="text" id="M2" onchange="multi(this.value);">
+</p>
+    <p style="font-family: Verdana;font-size: 120%;">El resultado es:</p>
+    <p style="color: darkblue;font-size: 200%;"  id="Totalm"></p>
+
+<p>
+    <!-- variables de la división-->
+    <p style="font-family: Verdana;font-size: 150%;">Ingresa 2 numeros para realizar una división :</p>
+    <input type="text" id="D1" name ="Nombre" onchange="div(this.value);">
+    <input type="text" id="D2" onchange="div(this.value);">
+</p>
+    <p style="font-family: Verdana;font-size: 120%;">El resultado es:</p>
+    <p style="color: darkblue;font-size: 200%;"  id="Totald"></p>   
+
+    
+</body>
+</html>

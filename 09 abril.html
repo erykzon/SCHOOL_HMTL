@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>CUESTIONARIO</title>
+    <script>
+        function  evaluar()
+        {
+            var P1;
+            var P2;
+            var P3;
+            var P4;
+            var P5;
+            var P6, P7, P8, P9, P10;
+            var ok1;
+            var ok2;
+            var ok3;
+            var ok4;
+            var ok5;
+            var ok6, ok7, ok8, ok9, ok10;
+            var nota =0;
+            var aciertos =0;
+            var fallos =0;
+            var correctas =0;
+            var blancos =0;
+            var final=0;
+            // codigo primer pregunta
+        if (document.getElementById("p301").checked==true){
+            ok1= 0.5;
+            aciertos++;
+            final = ok1;
+            correctas++;
+            }else if (document.getElementById("p302").checked==true){
+                p1= -0.5;
+                fallos++;
+                } else if (document.getElementById("p303").checked==true){
+                    p1= -0.5;
+                    fallos ++;
+                }else if (document.getElementById("p304").checked==true){
+                    p1=-0.5;
+                    fallos++;
+                }else {
+                    p1=0;
+                    blancos++;
+                }
+                //codigo segunda pregunta
+                if (document.getElementById("p307").checked==true){
+            ok2= 0.5;
+            aciertos++;
+            final = ok2;
+            correctas++;
+            }else if (document.getElementById("p306").checked==true || document.getElementById("p305").checked==true || document.getElementById("p308").checked==true){
+                p2= -0.5;
+                fallos++;
+                }else {
+                    p2=0;
+                    blancos++;
+                }  
+     
+                 //codigo tercer pregunta
+                 if (document.getElementById("p312").checked==true){
+            ok3= 0.5;
+            aciertos++;
+            final = ok1;
+            correctas++;
+            }else if (document.getElementById("p309").checked==true || document.getElementById("p310").checked==true || document.getElementById("p311").checked==true){
+                p3= -0.5;
+                fallos++;
+                }else {
+                    p3=0;
+                    blancos++;
+                }                 
+                
+                 //codigo cuarta pregunta
+                 if (document.getElementById("p314").checked==true){
+            ok4= 0.5;
+            aciertos++;
+            final = ok4;
+            correctas++;
+            }else if (document.getElementById("p313").checked==true || document.getElementById("p315").checked==true || document.getElementById("p316").checked==true){
+                p4= -0.5;
+                fallos++;
+                }else {
+                    p4=0;
+                    blancos++;
+                }         
+
+                 //codigo quinta pregunta
+                 if (document.getElementById("p317").checked==true){
+            ok5= 0.5;
+            aciertos++;
+            final = ok5;
+            correctas++;
+            }else if (document.getElementById("p318").checked==true || document.getElementById("p319").checked==true || document.getElementById("p320").checked==true){
+                p5= -0.5;
+                fallos++;
+                }else {
+                    p5=0;
+                    blancos++;
+                }                
+                
+                 //codigo sexta pregunta
+                 if (document.getElementById("p323").checked==true){
+            ok6= 0.5;
+            aciertos++;
+            final = ok6;
+            correctas++;
+            }else if (document.getElementById("p321").checked==true || document.getElementById("p322").checked==true || document.getElementById("p324").checked==true){
+                p6= -0.5;
+                fallos++;
+                }else {
+                    p6=0;
+                    blancos++;
+                }
+
+                 //codigo septima pregunta
+                 if (document.getElementById("p328").checked==true){
+            ok7= 0.5;
+            aciertos++;
+            final = ok7;
+            correctas++;
+            }else if (document.getElementById("p325").checked==true || document.getElementById("p326").checked==true || document.getElementById("p327").checked==true){
+                p7= -0.5;
+                fallos++;
+                }else {
+                    p7=0;
+                    blancos++;
+                }
+                
+                 //codigo octava pregunta
+                 if (document.getElementById("p331").checked==true){
+            ok8= 0.5;
+            aciertos++;
+            final = ok8;
+            correctas++;
+            }else if (document.getElementById("p329").checked==true || document.getElementById("p330").checked==true || document.getElementById("p332").checked==true){
+                p8= -0.5;
+                fallos++;
+                }else {
+                    p8=0;
+                    blancos++;
+                }
+                
+                 //codigo novena pregunta
+                 if (document.getElementById("p334").checked==true){
+            ok9= 0.5;
+            aciertos++;
+            final = ok9;
+            correctas++;
+            }else if (document.getElementById("p333").checked==true || document.getElementById("p335").checked==true || document.getElementById("p336").checked==true){
+                p9= -0.5;
+                fallos++;
+                }else {
+                    p9=0;
+                    blancos++;
+                }
+                
+                 //codigo decima pregunta
+                 if (document.getElementById("p339").checked==true){
+            ok10= 0.5;
+            aciertos++;
+            final = ok10;
+            correctas++;
+            }else if (document.getElementById("p337").checked==true || document.getElementById("p338").checked==true || document.getElementById("p340").checked==true){
+                p10= -0.5;
+                fallos++;
+                }else {
+                    p10=0;
+                    blancos++;
+                }                
+
+
+                // if resultados
+        var nota = correctas* 0.5;
+        var puntuacion;
+        if(nota<=0){
+            puntuacion=0;
+         }
+         else {
+             puntuacion=nota;
+         }
+
+         document.getElementById("aciertos").value=aciertos;
+         document.getElementById("fallos").value=fallos;
+         document.getElementById("blancos").value=blancos;
+         document.getElementById("puntuacion").value=puntuacion;
+         document.getElementById("correctas").value=correctas;
+        }
+
+    </script>
+</head>
+<body>
+<form method="POST" name="preguntas">
+    <!--Primer pregunta -->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue;">   ¿Cuánto es 2+2?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="pregunta1"   id="p301" value="A"> A) 4  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="pregunta1"   id="p302" value="B"> B) 6  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="pregunta1"   id="p303" value="C"> C) 8  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="pregunta1"   id="p304" value="D"> D) 10  </p>
+<!--segunda pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 4*2?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA2"   id="p305" value="A"> A) 5  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA2"   id="p306" value="B"> B) 65  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA2"   id="p307" value="C"> C) 8  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA2"   id="p308" value="D"> D) 6  </p>
+<!--tercer pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 4/2?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA3"   id="p309" value="A"> A) 12  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA3"   id="p310" value="B"> B) 6  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA3"   id="p311" value="C"> C) 8  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA3"   id="p312" value="D"> D) 2 </p>
+<!--cuarta pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Raíz cuadrada de 9?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA4"   id="p313" value="A"> A) 12  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA4"   id="p314" value="B"> B) 3  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA4"   id="p315" value="C"> C) 8  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA4"   id="p316" value="D"> D) 2 </p>
+<!--quinta pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 12 * 11?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA5"   id="p317" value="A"> A) 132  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA5"   id="p318" value="B"> B) 33  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA5"   id="p319" value="C"> C) 123  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA5"   id="p320" value="D"> D) 213 </p>
+<!--sexta pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 126/7?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA6"   id="p321" value="A"> A) 14  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA6"   id="p322" value="B"> B) 26  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA6"   id="p323" value="C"> C) 18  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA6"   id="p324" value="D"> D) 32 </p>
+<!--septima pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 13 + 17?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA7"   id="p325" value="A"> A) 3  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA7"   id="p326" value="B"> B) 63  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA7"   id="p327" value="C"> C) 28  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA7"   id="p328" value="D"> D) 30 </p>
+<!--octava pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 9 * 12?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA8"   id="p329" value="A"> A) 99  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA8"   id="p330" value="B"> B) 21  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA8"   id="p331" value="C"> C) 108  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA8"   id="p332" value="D"> D) 92 </p>
+<!--novena pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Raíz cuadrada de 16?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA9"   id="p333" value="A"> A) 12  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA9"   id="p334" value="B"> B) 4  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA9"   id="p335" value="C"> C) 8  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA9"   id="p336" value="D"> D) 2 </p>
+<!--decima pregunta-->
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">   ¿Cuánto es 10 *10 ?      </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA10"   id="p337" value="A"> A) 10  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA10"   id="p338" value="B"> B) 1000  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA10"   id="p339" value="C"> C) 100  </p>
+<p style="font-family: Verdana;font-size: 100%;">  <input type="radio" name="PREGUNTA10"   id="p340" value="D"> D) 1 </p>
+
+
+<input style="font-family: Verdana;" type="button" onclick="evaluar()" name="Evaluar" value="Evaluar" size="50">
+<p style="font-family: Verdana;font-size: 150%; color: darkblue"> Resultado del examen </p>
+<p style="font-family: Verdana;font-size: 150%; color: darkblue"> Acertaste en: </p>
+<input  style="font-family: Verdana;font-size: 150%; color: darkgreen" size="3" id="aciertos" readonly>
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">Fallaste en:</p>
+<input style="font-family: Verdana;font-size: 150%; color: darkred" size="3" id="fallos" readonly>
+<p style="font-family: Verdana;font-size: 150%; color: darkblue">Dejaste de responder en:</p>
+<input style="font-family: Verdana;font-size: 150%; color: goldenrod" size="3" id="blancos" readonly>
+
+<p style="font-family: Verdana;font-size: 150%; color: darkblue"> Puntuación</p>
+<input  style="font-family: Verdana;font-size: 200%; color: dodgerblue"size="10" id="puntuacion"readonly>
+
+</form>
+</body>
+</html>

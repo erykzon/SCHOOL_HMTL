@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> áreas </title>
+</head>
+<script>
+    function Circulo() {
+        var Num1 = parseInt(document.getElementById("N1").value);
+        var areaC;
+        var pi = 3.1416;
+        areaC = (areaC == null || areaC == "" || areaC == undefined) ? 0 : areaC;
+       areaC = pi * Math.pow(Num1,2);
+        document.getElementById("Totalc").innerHTML = areaC;         
+    }
+
+    function cuadrado (){
+        var Numero1 = parseInt(document.getElementById("C1").value);
+        var areacuad;
+       areacuad = ( areacuad == null || areacuad == undefined || areacuad == "") ? 0: areacuad; 
+       areacuad = Numero1 * Numero1;
+        document.getElementById("TotalCuad").innerHTML = areacuad;    
+       }
+
+       function rectangulo (){
+           var rec1 = parseInt(document.getElementById("R1").value);
+           var rec2 = parseInt(document.getElementById("R2").value);
+           var arearec; 
+           arearec = (arearec == undefined || arearec == null || arearec =="") ? 0: arearec;
+            arearec = rec2 * rec1;
+            document.getElementById("Totalrec").innerHTML = arearec;
+       }
+
+  
+
+</script>
+
+<body>
+<P>
+    <!-- circulo-->
+    <p style="font-family: Verdana;font-size: 150%;"> Ingresa el valor del readio del circulo :</p>
+    <input type="text" id="N1" name ="Nombre" onchange="Circulo(this.value);">
+    <p style="font-family: Verdana;font-size: 120%;">El área del circulo es : </p>
+    <p style="color: darkblue;font-size: 200%;"  id="Totalc"></p>
+</P>    
+
+<p> 
+    <!-- cuadrado-->
+    <p style="font-family: Verdana;font-size: 150%;">Ingresa el valor de uno de los lados del cuadrado :</p>
+    <input type="text" id="C1" name ="Nombre" onchange="cuadrado(this.value);">
+    
+    
+    <p style="font-family: Verdana;font-size: 120%;">El area del cuadrado es :</p>
+    <p style="color: darkblue;font-size: 200%;"  id="TotalCuad"></p>
+</p>
+
+<p>
+    <!-- variables de la rectangulo-->
+    <p style="font-family: Verdana;font-size: 150%;">Ingresa el valor de cada lado del rectangulo para calcular su área :</p>
+    <input type="text" id="R1" name ="Nombre" onchange="rectangulo(this.value);">
+    <input type="text" id="R2" onchange="rectangulo(this.value);">
+
+    <p style="font-family: Verdana;font-size: 120%;">El area del rectangulo es :</p>
+    <p style="color: darkblue;font-size: 200%;"  id="Totalrec"></p>
+</p>
+
+
+    
+</body>
+</html>

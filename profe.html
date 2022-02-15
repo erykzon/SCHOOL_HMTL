@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo suma </title>
+</head>
+<style>
+    p {
+        color:blue;
+    }
+</style> 
+<script> 
+function suma(valor)  {
+var total = 0;
+valor = parseInt(valor);
+total = document.getElementById("Total").innerHTML;
+total = (total == null ||  total==""  || total==undefined) ? 0 : total;
+total =(parseInt(total) + parseInt(valor));
+document.getElementById('Total').innerHTML = total;
+}
+</script>
+<body style="background-color:powderblue;"> 
+    <center>
+<input type="text" id="numero1" name ="nombre" onchange="suma(this.value);">
+<input type="text" id="numero2" onchange="suma(this.value);">
+<input type="text" id="numero3" onchange="suma (this.value);">
+</center>
+<p> El resultado es: </p>
+<p id="Total"></p>
+<font color="red"><h1>Hola</h1>  </font>
+</body> 
+</html>
